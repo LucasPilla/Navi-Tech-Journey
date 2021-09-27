@@ -1,0 +1,82 @@
+{% extends "reviews/base.html" %}
+{% load static %}
+
+{% block content %}
+    
+    <div class="header-container">
+        <div class="wrapper">
+            <header>
+                <div class="hero-content">
+                    <h1>Invista consciente</h1>
+                    <p>
+                        Somos um plataforma que compila métricas sociais de organizações listadas na bolsa brasileira, promovendo assim, uma maior transparência e facilidade para que investidores conscientes tomem melhores decisões, de forma fácil, via web scrapping.
+                    </p>
+                    <div>
+                        <a class="btn" href="#">Comece já</a>
+                        <small>
+                            <img src="{% static 'assets/play-btn.svg' %}"/>
+                            <a href="#">Assista ao vídeo</a>
+                        </small>
+                    </div>
+                </div>
+
+                <div class="hero-img">
+                    <img src="{% static 'assets/amico.svg' %}"/>
+                    <div class="background"></div>
+                </div>
+                </div>
+            </header>
+
+        </div>
+    </div>
+
+
+    <h3>Sune foi contruído<br>especificamente para você.</h3>
+    <div class="bg-change">
+
+        <div class="card-list wrapper">
+            <div class="card">
+                <img src="{% static 'assets/icons/icon1.svg' %}"/>
+                <h4>Praticidade</h4>
+                
+            </div>
+            <div class="card">
+                <img src="{% static 'assets/icons/icon2.svg' %}"/>
+                <h4>Confiabilidade</h4>
+                
+            </div>
+            <div class="card">
+                <img src="{% static 'assets/icons/icon3.svg' %}"/>
+                <h4>Transparência</h4>
+                
+            </div>
+        </div>
+
+        <a class="btn" href="#">Cadastre-se</a>
+
+    </div>
+
+    <div class="header-container">
+        <div class="wrapper">
+            <header>
+
+                <div class="hero-img">
+                    <img src="{% static 'assets/amico2.svg' %}"/>
+                    <div class="background"></div>
+                </div>
+
+                <div class="hero-content">
+                    <h1>Nós reunimos as<br>informações para você.</h1>
+                    <p>
+                        Acompanhe e compare as organizações que você acredita e tenha acesso ao que elas têm feito para gerar mais valor para a sociedade.
+                    </p>
+                    
+                        
+                </div>
+                </div>
+            </header>
+
+        </div>
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,99 @@
+/* Header */
+
+.header-container {
+    background: #ffffff;
+    height: calc(100vh - 80);
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+header .hero-content{
+    padding: 20px;
+}
+
+header h1 {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 60px;
+    color: #22343D;
+}
+
+header p {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    color: #22343D;
+    text-align: justify;
+    margin: 13px 13px 13px 0;
+}
+
+header a {
+    list-style: none;
+    font-size: 16px;
+}
+
+.btn{
+    color: #FFFFFF;
+    background: #02897A;
+    border-radius: 4px;
+    padding: 12px 48px;
+    margin-right: 30px;
+}
+
+header small a{
+    color: #02897A;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* Background change */
+.bg-change {
+    padding:60px;
+    background-image: url('../assets/bg-change.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+/* Cards */
+h3 {
+    margin-top: 60px;
+    font-weight: bold;
+    font-size: 32px;
+    text-align: center;
+    color: #22343D;
+}
+
+.card {
+    margin-left: 50px;
+}
+
+.card img{
+    height: 50px;
+    width: 50px;
+    border-radius: 19px;
+    margin-bottom: 30px;
+}
+
+.card-list {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card p {
+    margin-top: 15px;
+}
+
+
+

@@ -1,0 +1,67 @@
+{% extends "reviews/base.html" %}
+{% load static %}
+
+{% block content %}
+    
+    <div class="header-container">
+        <div class="wrapper">
+            <header>
+
+                <div class="hero-content">
+
+                    <h1>Meu Ranking</h1>
+                    <p>
+                        As empresas que você escolheu ficar de olho.
+                    </p>
+
+                </div>
+            </header>
+        </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="data-table wrapper">
+        
+        <ul class="data-items">
+            
+            <table>
+            {% if company.all %}
+            <tr class="table-header">
+                <th></th>
+                <th>Diversidade</th>
+                <th>Glassdoor</th>
+                <th>ReclameAqui</th>
+                <th>Score</th>
+            </tr>
+            {% else %}
+            <p id="warning">Você não está acompanhando nenhuma empresa no momento.</p>
+            {% endif %}
+            {% for company in companies %}
+            <tr>
+                <td class="topic-item">
+                    <img id='company-img' src="{% static company.img %}"/> 
+                    <h4>{{ company.name }}</h4>
+                </td>
+                <td>
+                    <div class="hl-grey"><p>{{ company.diversity }}</p></div>
+                </td>
+                <td>
+                    <div class="hl-grey"><p>{{ company.glassdoor }}</p></div>
+                </td>
+                <td>
+                    <div class="hl-grey"><p>{{ company.reclameaqui }}</p></div>
+                </td>
+                <td>
+                    <div class="hl-green"><p>{{ company.score }}</p></div>
+                </td>
+            </tr>
+            {% endfor %}
+            </table>
+            
+            
+        </ul>
+
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,69 @@
+{% extends "reviews/base.html" %}
+{% load static %}
+
+{% block content %}
+    
+    <div class="header-container">
+        <div class="wrapper">
+            <header>
+
+                <div class="hero-img">
+                    <img src="{% static 'assets/amico3.svg' %}"/>
+                    <div class="background"></div>
+                </div>
+
+                <div class="hero-content">
+
+                    <h1>Tudo em um só lugar.</h1>
+                    <p>
+                        Acompanhe e compare as métricas ESG das organizações do seu interesse
+                    </p>
+
+
+                </div>
+            </header>
+        </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="data-table wrapper">
+        
+        <ul class="data-items">
+            
+            <table>
+            <tr class="table-header">
+                <th></th>
+                <th>Diversidade</th>
+                <th>Glassdoor</th>
+                <th>ReclameAqui</th>
+                <th>Score</th>
+            </tr>
+            {% for company in companies %}
+            <tr>
+                <td class="topic-item">
+                    <img id='company-img' src="{% static company.img %}"/> 
+                    <h4>{{ company.name }}</h4>
+                </td>
+                <td>
+                    <div class="hl-grey"><p>{{ company.diversity }}</p></div>
+                </td>
+                <td>
+                    <div class="hl-grey"><p>{{ company.glassdoor }}</p></div>
+                </td>
+                <td>
+                    <div class="hl-grey"><p>{{ company.reclameaqui }}</p></div>
+                </td>
+                <td>
+                    <div class="hl-green"><p>{{ company.score }}</p></div>
+                </td>
+            </tr>
+            {% endfor %}
+            </table>
+            
+            
+        </ul>
+
+    </div>
+
+{% endblock content %}
